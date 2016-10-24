@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery.min.js" type="text/javascript"></script>
+    <style type="text/css">
+      div,span,p{
+        width: 140px;
+        height: 140px;
+        margin: 5px;
+        background-color: #aaa;
+        border: #000 1px solid;
+        float: left;
+        font-size: 17px;
+        font-family: Verdana;
+    }
+    </style>
+  </head>
+  <body>
+    <div title="en">title为en的div元素</div>
+    <div title="en-UK">title为en-UK的div元素</div>
+    <div title="enlish">title为enlish的div元素</div>
+    <div title="en uk">title为en uk的div元素</div>
+    <div title="uken">title为en的div元素</div>
+    <script type="text/javascript">
+      //$("div[title^=en]").css("background","#bbffaa");
+      //$("div[title*=en]").css("background","#bbffaa");
+      //$("div[title|=en]").css("background","#bbffaa");
+      //$("div[title~=en]").css("background","#bbffaa");
+    </script>
+  </body>
+</html>

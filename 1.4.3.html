@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <input type="checkbox" id="cr" /><label for="cr">我已经阅读了上面制度</label>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        var $cr = $("#cr");
+        var cr = $cr[0];
+        $cr.on('click', function(){
+          if (cr.checked) {                  //DOM方式判断
+            alert("you can continue to do it!");
+          }
+        })
+      })
+
+      /*
+      $(document).ready(function(){
+        var $cr = $("#cr");
+        $cr.on('click', function(){
+          if ($cr.is(":checked")) {           //jquery方式判断
+            alert("you can continue to do it!");
+          }
+        })
+      })
+      */
+    </script>
+  </body>
+</html>
