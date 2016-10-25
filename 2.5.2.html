@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="test">
+      <div style="display:none;">aa</div>
+      <div style="display:none;">bb</div>
+      <div style="display:none;">cc</div>
+      <div class="test" style="display:none;">dd</div>
+    </div>
+    <div class="test" style="display:none;">ee</div>
+    <div class="test" style="display:none;">ff</div>
+    <script type="text/javascript">
+      var a = $(".test :hidden").length;
+      var b = $(".test:hidden").length;
+      console.log(a);
+      console.log(b);
+    </script>
+  </body>
+</html>

@@ -20,6 +20,31 @@
       <input type="checkbox" name="newsletter" value="test5">test5
       <div ></div>
       <br/><br/>
+      下拉列表：<br/>
+      <select  name="test" multiple="multiple" style="height:100px">
+        <option>浙江</option>
+        <option selected="selected">湖南</option>
+        <option>北京</option>
+        <option selected="selected">天津</option>
+        <option>广州</option>
+        <option>湖北</option>
+      </select>
+      <br/><br/>
+      下拉列表2：<br/>
+      <select  name="test2">
+        <option>浙江</option>
+        <option>湖南</option>
+        <option selected="selected">北京</option>
+        <option>天津</option>
+        <option>广州</option>
+        <option>湖北</option>
+      </select>
     </form>
+    <script type="text/javascript">
+      //$("#form1 input:enabled").val("这里变化大了");
+      //$("#form1 input:disabled").val("这里变化了！");
+      //$("input:checked").length;
+      $("select:selected").text()
+    </script>
   </body>
 </html>
