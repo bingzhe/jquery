@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>单选框控制表格变色</title>
+    <style type="text/css" media="screen">
+      table{
+        border: 0;
+        border-collapse: collapse;
+      }
+      td{
+        font: normal 12px/17px Arial;
+        padding: 2px;
+        width: 100px;
+      }
+      th{
+        font: bold 12px/17px Arial;
+        text-align: left;
+        padding: 4px;
+        border-bottom: 1px solid #333;
+      }
+      .even{
+        background: #fff38f;
+      }
+      .odd{
+        background: #ffffee;
+      }
+      .selected{
+        background: #ff6500;
+        color: #fff;
+      }
+    </style>
+    <script src="../../jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr><th>姓名</th><th>性别</th><th>暂住地</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><input type="radio" name="choice" value=""></td><td>张山</td><td>男</td><td>浙江</td></tr>
+        <tr><td><input type="radio" name="choice" value=""></td><td>张山</td><td>男</td><td>浙江</td></tr>
+        <tr><td><input type="radio" name="choice" value=""></td><td>张山</td><td>男</td><td>浙江</td></tr>
+        <tr><td><input type="radio" name="choice" value=""></td><td>张山</td><td>男</td><td>浙江</td></tr>
+        <tr><td><input type="radio" name="choice" value=""></td><td>张山</td><td>男</td><td>浙江</td></tr>
+        <tr><td><input type="radio" name="choice" value=""></td><td>张山</td><td>男</td><td>浙江</td></tr>
+      </tbody>
+    </table>
+    <script type="text/javascript">
+      $("tbody>tr:odd").addClass("odd");
+      $("tbody>tr:even").addClass("even");
+
+      $("tbody>tr").on("click", function(){
+        $(this).addClass('selected')
+              .siblings().removeClass('selected')
+              .end()
+              .find(':radio').attr('checked', true);
+      });
+
+      $('table :radio:checked').parents("tr").addClass('selected');
+    </script>
+  </body>
+</html>
