@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../../jquery.min.js" charset="utf-8"></script>
+    <style  type="text/css" media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        font-size: 12px;
+      }
+      .comment{
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background: #ddd;
+      }
+      .comment h6{
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .para{
+        margin-top: 5px;
+        text-indent: 2em;
+        background: #DDD;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" id="send" value="Ajax获取" />
+    <div class="comment">已有评论：</div>
+    <div id="resText"></div>
+    <script type="text/javascript">
+/*
+
+        $("#send").on("click", fucntion(){
+          $("#resText").load("test.html");
+        });
+
+        $("#send").on("click", fucntion(){
+          $("#resText").load("test.html .para");  //筛选载入的html文档
+        });
+*/
+      $("#send").on("click", function(){
+        $("#resText").load("test.html .para", function(responseText, textStauts, XMLHttpRequest){
+          alert( $(this).html() );  //在这里this指向的是当前的DOM对象，即$("iptText")[0]
+          alert(responseText);   //请求返回的内容
+          alert(textStauts);   //请求返回的内容
+          alert(XMLHttpRequest);   //XMLHttpRequest对象
+        });
+      })
+
+    </script>
+  </body>
+</html>
