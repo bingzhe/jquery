@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/demo.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/basic.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/box.css" media="screen" title="no title" charset="utf-8">
+    <script src="../../jquery.min.js" charset="utf-8"></script>
+    <script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+  </head>
+  <body>
+    <div id='container'>
+
+      <div id='logo'>
+        <h1>Simple<span><a href="http://www.ericmmartin.com/projects/simplemodal-demos/">Modal</a></span></h1>
+        <span class='title'>一个简单的遮罩层，可以制作提示框，对话框，弹出层，弹出iframe等...</span>
+      </div>
+      <div id='content'>
+        <div id='basic-modal'>
+          <p>提示框-ok：<input type='button' name='basic' value='Demo' class='open-basic-dialog-ok'/> or <a href='#' class='open-basic-dialog-ok'>Demo</a></p>
+          <p>提示框-warn：<input type='button' name='basic' value='Demo' class='open-basic-dialog-warn'/> or <a href='#' class='open-basic-dialog-warn'>Demo</a></p>
+          <p>弹出iframe：<input type='button' name='basic' value='Demo' class='open-basic-ifr'/> or <a href='#' class='open-basic-ifr'>Demo</a></p>
+        </div>
+      </div>
+
+      <div id="basic-dialog-warn">
+        <!-- 普通弹出层 [[-->
+        <div class="box-title show"><h2>提示</h2></div>
+        <div class="box-main">
+          <div class="tips">
+            <span class="tips-ico">
+              <span class="ico-warn"><!--图标--></span>
+            </span>
+            <div class="tips-content">
+              <div class="tips-title">系统繁忙，请稍后在试</div>
+              <div class="tips-line"></div>
+            </div>
+          </div>
+          <div class="box-buttons"><button type="button" class="simplemodal-close">关闭</button></div>
+        </div>
+        <!-- 普通弹出层 [[-->
+      </div>
+
+
+      <div id="ifr-dialog">
+        <iframe frameborder="0" scrolling="no" id="ifr-dialog-container" src="javascript:;" class="box-iframe"></iframe>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $('.open-basic-dialog-warn').click(function (e) {
+      $('#basic-dialog-warn').modal();
+      return false;
+      });
+
+      $('.open-basic-ifr').click(function (e) {
+      showIframe("http://www.baidu.com","ifr-dialog-content");
+      return false;
+      });
+    </script>
+  </body>
+</html>
