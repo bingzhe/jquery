@@ -286,7 +286,7 @@
   margin: 0;
   width: 80px;
 }
-#jnImageroll a.chos {
+#jnImageroll .chos {
   background: url("../images/adindex.gif") no-repeat center 39px #37A7D7;
   color: #FFFFFF;
 }
